@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File reader</title>
+  <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body ng-app="filereader" ng-controller="fileController as vm">
+  <div class="panel panel-default">
+    <label for="path">Pfad: </label>
+    <input type="text" id="path" name="path" ng-model="vm.path">
+    <button ng-click="vm.showFiles()">Dateien auflisten</button>
+    <table class="table table-striped">
+      <tr ng-repeat="file in vm.files">
+        <td>{{file}}</td>
+      </tr>
+    </table>
+  </div>
+  <script type="text/javascript" src="./lib/jquery/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./lib/bootstrap/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./lib/angular/angular-1.5.6.min.js"></script>
+  <script type="text/javascript" src="./scripts/main.js"></script>
+</body>
+</html>
